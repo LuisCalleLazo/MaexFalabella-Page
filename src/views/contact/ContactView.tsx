@@ -1,4 +1,5 @@
 import { useState } from "react"
+import emailjs from "@emailjs/browser";
 
 export const ContactView = () =>
 {
@@ -13,7 +14,31 @@ export const ContactView = () =>
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
+    const serviceId = import.meta.env.VITE_MAIL_SERVICE_ID;
+    const templateId = import.meta.env.VITE_MAIL_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_MAIL_PUBLIC_KEY;
+
+    const templateParams = {
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      email: formData.email,
+      empresa: formData.empresa,
+      posicion: formData.posicion,
+      pais: formData.pais,
+      mensaje: formData.mensaje,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email enviado con éxito:", response);
+        alert("Mensaje enviado correctamente.");
+      })
+      .catch((error) => {
+        console.error("Error al enviar el email:", error);
+        alert("Error al enviar el mensaje.");
+      });
   }
 
   return (
