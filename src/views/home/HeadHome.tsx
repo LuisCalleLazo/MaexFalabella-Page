@@ -28,12 +28,12 @@ export const HeadHome = () =>
               </a>
             ))} */}
           </nav>
-          <div className="flex items-center space-x-4">
+          {/* <div className="flex items-center space-x-4">
             <select className="bg-black text-white rounded px-2 py-1">
               <option>ES</option>
               <option>EN</option>
             </select>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

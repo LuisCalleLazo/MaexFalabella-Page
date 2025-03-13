@@ -47,9 +47,9 @@ export const FooterHome = () =>
             </ul>
             <h3 className="text-yellow-500 font-bold mt-6 mb-4">Síguenos</h3>
             <div className="flex space-x-4">
-              {['facebook', 'instagram', 'linkedin'].map((social) => (
+              {['bi bi-facebook', 'bi bi-instagram', 'bi bi-linkedin'].map((social) => (
                 <a key={social} href="#" className="text-white hover:text-yellow-500">
-                  <div className="w-8 h-8 bg-white"></div>
+                  <i className={social}></i>
                 </a>
               ))}
             </div>
