@@ -22,11 +22,11 @@ export const HeadHome = () =>
             <Link to={"/contact"} className="text-white hover:text-gray-200">
               Contacto
             </Link>
-            {['Oficinas', 'Aproxímate', 'Noticias'].map((item) => (
+            {/* {['Oficinas', 'Aproxímate', 'Noticias'].map((item) => (
               <a key={item} href="#" className="text-white hover:text-gray-200">
                 {item}
               </a>
-            ))}
+            ))} */}
           </nav>
           <div className="flex items-center space-x-4">
             <select className="bg-black text-white rounded px-2 py-1">

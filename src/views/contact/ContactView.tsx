@@ -43,7 +43,7 @@ export const ContactView = () =>
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-yellow-600 to-orange-600">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 flex justify-around">
         <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8">
           <h1 className="text-4xl font-bold text-white text-center mb-8">
             Estaremos felices de escuchar de ti
@@ -131,6 +131,38 @@ export const ContactView = () =>
               </label>
             </div>
           </form>
+        </div>
+        
+        <div className="w-[50%] px-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-6">Encuéntranos</h2>
+            
+            <div className="space-y-4 text-white mb-6">
+              <p className="flex items-center">
+                <span className="w-20 font-medium">Dirección:</span>
+                <span>Av. 16 de Julio, La Paz, Bolivia</span>
+              </p>
+              <p className="flex items-center">
+                <span className="w-20 font-medium">Teléfono:</span>
+                <span>+591 2 123 4567</span>
+              </p>
+              <p className="flex items-center">
+                <span className="w-20 font-medium">Email:</span>
+                <span>contacto@empresa.com</span>
+              </p>
+            </div>
+
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative pb-[75%] h-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.3663116523!2d-68.13398868513684!3d-16.49839168861276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20f04f9a2e5d%3A0x8f0f6e4d1a2c9a0!2sAv.%2016%20de%20Julio%2C%20La%20Paz%2C%20Bolivia!5e0!3m2!1sen!2sus!4v1625180000000!5m2!1sen!2sus"
+                  className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
